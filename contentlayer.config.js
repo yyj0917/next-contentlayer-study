@@ -4,11 +4,27 @@ import { defineDocumentType, makeSource } from "contentlayer/source-files"
 const computedFields = {
   slug: {
     type: "string",
-    resolve: (doc) => `/${doc._raw.flattenedPath}`,
+    resolve: (doc) => {
+      const segments = doc._raw.flattenedPath.split("/")
+      const normalizedSegments =
+        segments[0] === "pages" ? segments.slice(1) : segments
+      const pathname = normalizedSegments.join("/")
+
+      if (pathname.length === 0 || pathname === "index") {
+        return "/"
+      }
+
+      return `/${pathname}`
+    },
   },
   slugAsParams: {
     type: "string",
-    resolve: (doc) => doc._raw.flattenedPath.split("/").slice(1).join("/"),
+    resolve: (doc) => {
+      const [, ...segments] = doc._raw.flattenedPath.split("/")
+      const pathname = segments.filter(Boolean).join("/")
+
+      return pathname
+    },
   },
 }
 
