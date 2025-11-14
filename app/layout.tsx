@@ -1,3 +1,6 @@
+import type { Metadata } from "next"
+import type { ReactNode } from "react"
+
 import Link from "next/link"
 import "./globals.css"
 import { ThemeProvider } from "@/components/theme-provider"
@@ -10,7 +13,7 @@ export const metadata = {
 }
 
 interface RootLayoutProps {
-  children: React.ReactNode
+  children: ReactNode
 }
 
 export default function RootLayout({ children }: RootLayoutProps) {
