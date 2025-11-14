@@ -1,34 +1,35 @@
+import type { Metadata } from "next"
+
 import { notFound } from "next/navigation"
 import { allPosts } from "@/.contentlayer/generated"
 
-import { Metadata } from "next"
 import { Mdx } from "@/components/mdx-components"
 
-interface PostProps {
-  params: {
-    slug: string[]
-  }
+type PostParams = {
+  slug: string[]
 }
 
-async function getPostFromParams(params: PostProps["params"]) {
-  const slug = params?.slug?.join("/")
-  const post = allPosts.find((post) => post.slugAsParams === slug)
+interface PostProps {
+  params: PostParams
+}
+
+function getPostFromParams(params: PostParams) {
+  if (!params?.slug?.length) {
+    notFound()
+  }
+
+  const slug = params.slug.join("/")
+  const post = allPosts.find((candidate) => candidate.slugAsParams === slug)
 
   if (!post) {
-    null
+    notFound()
   }
 
   return post
 }
 
-export async function generateMetadata({
-  params,
-}: PostProps): Promise<Metadata> {
-  const post = await getPostFromParams(params)
-
-  if (!post) {
-    return {}
-  }
+export function generateMetadata({ params }: PostProps): Metadata {
+  const post = getPostFromParams(params)
 
   return {
     title: post.title,
@@ -36,18 +37,14 @@ export async function generateMetadata({
   }
 }
 
-export async function generateStaticParams(): Promise<PostProps["params"][]> {
+export function generateStaticParams(): PostParams[] {
   return allPosts.map((post) => ({
     slug: post.slugAsParams.split("/"),
   }))
 }
 
-export default async function PostPage({ params }: PostProps) {
-  const post = await getPostFromParams(params)
-
-  if (!post) {
-    notFound()
-  }
+export default function PostPage({ params }: PostProps) {
+  const post = getPostFromParams(params)
 
   return (
     <article className="py-6 prose dark:prose-invert">
