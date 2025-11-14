@@ -1,7 +1,7 @@
 import type { Metadata } from "next"
 
 import { notFound } from "next/navigation"
-import { allPosts } from "contentlayer/generated"
+import { allPosts } from "@/.contentlayer/generated"
 
 import { Mdx } from "@/components/mdx-components"
 
