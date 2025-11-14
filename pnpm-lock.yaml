@@ -7,11 +7,11 @@ specifiers:
   '@types/react-dom': 18.2.1
   '@vercel/analytics': ^1.0.0
   autoprefixer: 10.4.14
-  contentlayer: ^0.3.2
+  contentlayer: ^0.3.4
   eslint: 8.39.0
   eslint-config-next: 13.3.1
   next: 13.4.1
-  next-contentlayer: ^0.3.2
+  next-contentlayer: ^0.3.4
   next-themes: ^0.2.1
   postcss: 8.4.23
   react: 18.2.0
@@ -26,11 +26,11 @@ dependencies:
   '@types/react-dom': 18.2.1
   '@vercel/analytics': 1.0.1
   autoprefixer: 10.4.14_postcss@8.4.23
-  contentlayer: 0.3.2_typescript@5.0.4
+  contentlayer: 0.3.4_esbuild@0.18.20
   eslint: 8.39.0
   eslint-config-next: 13.3.1_iacogk7kkaymxepzhgcbytyi7q
   next: 13.4.1_biqbaboplfbrettd7655fr4n2y
-  next-contentlayer: 0.3.2_avxoewaes4v46nqpraxhl6tn3y
+  next-contentlayer: 0.3.4_contentlayer@0.3.4_esbuild@0.18.20__esbuild@0.18.20_next@13.4.1
   next-themes: 0.2.1_2xek2u27flvv5bywadnu4xxgx4
   postcss: 8.4.23
   react: 18.2.0
@@ -52,11 +52,11 @@ packages:
       regenerator-runtime: 0.13.11
     dev: false
 
-  /@contentlayer/cli/0.3.2_typescript@5.0.4:
+  /@contentlayer/cli/0.3.4_esbuild@0.18.20:
     resolution: {integrity: sha512-KLzB2z3Klbl4bU7VTJ8EaY1d17GCBFtwgvtNAVLOqUJ4LRw46+jT+qBMk8gyy7R1xDNF2H1a/yGYs8t8rlFVmg==}
     dependencies:
-      '@contentlayer/core': 0.3.2_typescript@5.0.4
-      '@contentlayer/utils': 0.3.2_typescript@5.0.4
+      '@contentlayer/core': 0.3.4_esbuild@0.18.20
+      '@contentlayer/utils': 0.3.4
       clipanion: 3.2.0
       typanion: 3.12.1
     transitivePeerDependencies:
@@ -66,10 +66,10 @@ packages:
       - typescript
     dev: false
 
-  /@contentlayer/client/0.3.2_typescript@5.0.4:
+  /@contentlayer/client/0.3.4_esbuild@0.18.20:
     resolution: {integrity: sha512-5m7IFd0Z8qRBAOnAYwWcf/SFe1SmtHmeV1kO4pldEuD8J/5sxKeefdGHLNnH3sxlGfeJhEdDnymJtppg8v0D8w==}
     dependencies:
-      '@contentlayer/core': 0.3.2_typescript@5.0.4
+      '@contentlayer/core': 0.3.4_esbuild@0.18.20
     transitivePeerDependencies:
       - '@effect-ts/otel-node'
       - markdown-wasm
@@ -77,7 +77,7 @@ packages:
       - typescript
     dev: false
 
-  /@contentlayer/core/0.3.2_typescript@5.0.4:
+  /@contentlayer/core/0.3.4_esbuild@0.18.20:
     resolution: {integrity: sha512-5ZLzS3s4Lp5Tlw+U4kUUK9frYmi8sc970spJSvLSxtOTDHDE7xemGT9HSj0V4DcmIkY9TT7pCmMFRfpEv7IC6Q==}
     peerDependencies:
       markdown-wasm: 1.x
@@ -87,7 +87,7 @@ packages:
       markdown-wasm:
         optional: true
     dependencies:
-      '@contentlayer/utils': 0.3.2_typescript@5.0.4
+      '@contentlayer/utils': 0.3.4
       camel-case: 4.1.2
       comment-json: 4.2.3
       esbuild: 0.17.18
@@ -106,11 +106,11 @@ packages:
       - typescript
     dev: false
 
-  /@contentlayer/source-files/0.3.2_typescript@5.0.4:
+  /@contentlayer/source-files/0.3.4_esbuild@0.18.20:
     resolution: {integrity: sha512-VYUaUbT3Hg3fSEEKpjDdfGEkw4bl4BaLHJWf5sulrkBtjdyNJ3RwUdnsqN3i+bibhcYF4ZvnFme4xtHBuEChmw==}
     dependencies:
-      '@contentlayer/core': 0.3.2_typescript@5.0.4
-      '@contentlayer/utils': 0.3.2_typescript@5.0.4
+      '@contentlayer/core': 0.3.4_esbuild@0.18.20
+      '@contentlayer/utils': 0.3.4
       chokidar: 3.5.3
       fast-glob: 3.2.12
       gray-matter: 4.0.3
@@ -127,12 +127,12 @@ packages:
       - typescript
     dev: false
 
-  /@contentlayer/source-remote-files/0.3.2_typescript@5.0.4:
+  /@contentlayer/source-remote-files/0.3.4_esbuild@0.18.20:
     resolution: {integrity: sha512-BuABBHemn/UzhARsQh2XH13VUeb5HoRI3NkJeCGEMSnstzI72Dcc6krELwG3cTFYmgb95TV8NuIZKcrz8IsX6A==}
     dependencies:
-      '@contentlayer/core': 0.3.2_typescript@5.0.4
-      '@contentlayer/source-files': 0.3.2_typescript@5.0.4
-      '@contentlayer/utils': 0.3.2_typescript@5.0.4
+      '@contentlayer/core': 0.3.4_esbuild@0.18.20
+      '@contentlayer/source-files': 0.3.4_esbuild@0.18.20
+      '@contentlayer/utils': 0.3.4
     transitivePeerDependencies:
       - '@effect-ts/otel-node'
       - markdown-wasm
@@ -140,7 +140,7 @@ packages:
       - typescript
     dev: false
 
-  /@contentlayer/utils/0.3.2_typescript@5.0.4:
+  /@contentlayer/utils/0.3.4:
     resolution: {integrity: sha512-qQdL3PN3zKl7monHe3EXlXgq7/raApWWJ7+2n0C81ESiwdM1ZFuHU+pOIkl5JWhotTkqAqYdSvFuM+MAXF8XFg==}
     peerDependencies:
       '@effect-ts/otel-node': '*'
@@ -1526,18 +1526,18 @@ packages:
     resolution: {integrity: sha512-/Srv4dswyQNBfohGpz9o6Yb3Gz3SrUDqBH5rTuhGR7ahtlbYKnVxw2bCFMRljaA7EXHaXZ8wsHdodFvbkhKmqg==}
     dev: false
 
-  /contentlayer/0.3.2_typescript@5.0.4:
+  /contentlayer/0.3.4_esbuild@0.18.20:
     resolution: {integrity: sha512-fQN3l/KvUW+nIvXiaShpOCvXX4alNbvfo56vnVxHVm6vKP10bb/IRhjMXPXZzr+5hmCaeep9wMpCAvOKB6NJHA==}
     engines: {node: '>=14.18'}
     hasBin: true
     requiresBuild: true
     dependencies:
-      '@contentlayer/cli': 0.3.2_typescript@5.0.4
-      '@contentlayer/client': 0.3.2_typescript@5.0.4
-      '@contentlayer/core': 0.3.2_typescript@5.0.4
-      '@contentlayer/source-files': 0.3.2_typescript@5.0.4
-      '@contentlayer/source-remote-files': 0.3.2_typescript@5.0.4
-      '@contentlayer/utils': 0.3.2_typescript@5.0.4
+      '@contentlayer/cli': 0.3.4_esbuild@0.18.20
+      '@contentlayer/client': 0.3.4_esbuild@0.18.20
+      '@contentlayer/core': 0.3.4_esbuild@0.18.20
+      '@contentlayer/source-files': 0.3.4_esbuild@0.18.20
+      '@contentlayer/source-remote-files': 0.3.4_esbuild@0.18.20
+      '@contentlayer/utils': 0.3.4
     transitivePeerDependencies:
       - '@effect-ts/otel-node'
       - markdown-wasm
@@ -3550,15 +3550,15 @@ packages:
     resolution: {integrity: sha512-OWND8ei3VtNC9h7V60qff3SVobHr996CTwgxubgyQYEpg290h9J0buyECNNJexkFm5sOajh5G116RYA1c8ZMSw==}
     dev: false
 
-  /next-contentlayer/0.3.2_avxoewaes4v46nqpraxhl6tn3y:
+  /next-contentlayer/0.3.4_contentlayer@0.3.4_esbuild@0.18.20__esbuild@0.18.20_next@13.4.1:
     resolution: {integrity: sha512-pihb/VtBq30eV+WpaWakWVtA1DWKzfXeaL7l/vR4MvrTO8UtZaX9H6wY0oSOqrmy674BRjXiQ03PbEOE5D6/iA==}
     peerDependencies:
       next: ^12 || ^13
       react: '*'
       react-dom: '*'
     dependencies:
-      '@contentlayer/core': 0.3.2_typescript@5.0.4
-      '@contentlayer/utils': 0.3.2_typescript@5.0.4
+      '@contentlayer/core': 0.3.4_esbuild@0.18.20
+      '@contentlayer/utils': 0.3.4
       next: 13.4.1_biqbaboplfbrettd7655fr4n2y
       react: 18.2.0
       react-dom: 18.2.0_react@18.2.0
